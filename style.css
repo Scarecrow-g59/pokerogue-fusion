@@ -1,0 +1,19 @@
+.type-effectiveness {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.type-effectiveness div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+    margin: 5px;
+}
+
+.type-effectiveness img {
+    width: 32px;
+    height: 32px;
+}

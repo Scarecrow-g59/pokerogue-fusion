@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon Fusion</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .type-icon {
+            width: 50px;
+            height: auto;
+            margin: 2px;
+        }
+        .pokemon-card {
+            margin-bottom: 20px;
+        }
+        .card-header {
+            font-weight: bold;
+            text-align: center;
+        }
+        .card-body {
+            text-align: center;
+        }
+        .type-effectiveness div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+        .type-effectiveness img {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mt-4">Pokémon Fusion</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card pokemon-card">
+                    <div class="card-header">Select Primary Pokémon</div>
+                    <div class="card-body">
+                        <select id="primaryPokemonDropdown" class="form-control"></select>
+                        <button id="fetchPrimary" class="btn btn-primary mt-2">Fetch Primary Pokémon Data</button>
+                        <div id="primarySprite" class="mt-2"></div>
+                        <div id="primaryData" class="mt-3"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card pokemon-card">
+                    <div class="card-header">Select Secondary Pokémon</div>
+                    <div class="card-body">
+                        <select id="secondaryPokemonDropdown" class="form-control"></select>
+                        <button id="fetchSecondary" class="btn btn-primary mt-2">Fetch Secondary Pokémon Data</button>
+                        <div id="secondarySprite" class="mt-2"></div>
+                        <div id="secondaryData" class="mt-3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            <button id="swapPokemon" class="btn btn-secondary mr-2">Swap Pokémon</button>
+            <button id="searchFusionCandidate" class="btn btn-info mr-2">Search Fusion Candidate</button>
+            <button id="fusePokemon" class="btn btn-success">Fuse Pokémon</button>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <div class="card pokemon-card">
+                    <div class="card-header">Fused Pokémon</div>
+                    <div class="card-body">
+                        <div id="fusedSprite"></div>
+                        <div id="fusedData" class="mt-3"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card pokemon-card">
+                    <div class="card-header">Type Effectiveness</div>
+                    <div class="card-body">
+                        <div id="typeEffectiveness" class="mt-4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
