@@ -1,18 +1,108 @@
+body {
+    background-color: #595959; /* Eerie black */
+    color: #1e2019; /* Powder blue */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1, h3, h4, h5 {
+    color: #2708A0; /* Kelly green */
+}
+
+.type-icon {
+    width: 50px;
+    height: 50px;
+}
+
+.sprite {
+    width: 130px;
+    height: 130px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mt-4, .my-4 {
+    margin-top: 1.5rem !important;
+}
+
+.mt-2, .my-2 {
+    margin-top: 0.5rem !important;
+}
+
+.mt-3, .my-3 {
+    margin-top: 1rem !important;
+}
+
+footer {
+    background-color: #1e2019; /* Eerie black */
+    color: #95b8d1; /* Powder blue */
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
 .type-effectiveness {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     gap: 10px;
+    justify-content: center;
 }
 
 .type-effectiveness div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 14px;
-    margin: 5px;
+    margin: 10px;
+    text-align: center;
 }
 
+@media (max-width: 768px) {
+    .row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}
+.type-icon {
+    width: auto;
+    height: auto;
+    margin: 2px;
+}
+.pokemon-card {
+    margin-bottom: 20px;
+    background-color: #DCE0D9;
+}
+.card-header {
+    font-weight: bold;
+    text-align: center;
+    font-size: 2rem;
+    color: #07004D;
+}
+.card-body {
+    text-align: center;
+}
+.type-effectiveness div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
 .type-effectiveness img {
-    height: 32px;
+    margin-right: 10px;
+    flex-wrap: wrap;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #07004D;
+    border-radius: 5px;
+    background-color: #95b8d1;
+    color: #07004D;
 }

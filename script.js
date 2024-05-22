@@ -176,26 +176,26 @@ function displayTypeEffectiveness(effectiveness) {
         <h5>Type Effectiveness:</h5>
         <div class="type-effectiveness">
             ${effectiveness.double.length ? `
-                <div>2x Damage From: ${effectiveness.double.map(type => `
+                <ln>2x Damage From: ${effectiveness.double.map(type => `
                     <div>
                         <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-ix/scarlet-violet/${TYPE_IDS[type]}.png" alt="${type}">
-                        <span>${type.charAt(0).toUpperCase() + type.slice(1)}</span>
+                        
                     </div>`).join('')}
-                </div>` : ''}
+                </ln>` : ''}
             ${effectiveness.half.length ? `
-                <div>0.5x Damage From: ${effectiveness.half.map(type => `
+                <ln>0.5x Damage From: ${effectiveness.half.map(type => `
                     <div>
                         <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-ix/scarlet-violet/${TYPE_IDS[type]}.png" alt="${type}">
-                        <span>${type.charAt(0).toUpperCase() + type.slice(1)}</span>
+                        
                     </div>`).join('')}
-                </div>` : ''}
+                </ln>` : ''}
             ${effectiveness.none.length ? `
-                <div>0x Damage From: ${effectiveness.none.map(type => `
+                <ln>0x Damage From: ${effectiveness.none.map(type => `
                     <div>
                         <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-ix/scarlet-violet/${TYPE_IDS[type]}.png" alt="${type}">
-                        <span>${type.charAt(0).toUpperCase() + type.slice(1)}</span>
+                        
                     </div>`).join('')}
-                </div>` : ''}
+                </ln>` : ''}
         </div>
     `;
 }
