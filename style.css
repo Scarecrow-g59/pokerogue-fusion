@@ -1,18 +1,69 @@
+body {
+    background-color: #1e2019; /* Eerie black */
+    color: #95b8d1; /* Powder blue */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1, h3, h4, h5 {
+    color: #71b340; /* Kelly green */
+}
+
+.type-icon {
+    width: 50px;
+    height: 50px;
+}
+
+.sprite {
+    width: 130px;
+    height: 130px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mt-4, .my-4 {
+    margin-top: 1.5rem !important;
+}
+
+.mt-2, .my-2 {
+    margin-top: 0.5rem !important;
+}
+
+.mt-3, .my-3 {
+    margin-top: 1rem !important;
+}
+
+footer {
+    background-color: #1e2019; /* Eerie black */
+    color: #95b8d1; /* Powder blue */
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
 .type-effectiveness {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     gap: 10px;
+    justify-content: center;
 }
 
 .type-effectiveness div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 14px;
-    margin: 5px;
+    margin: 10px;
+    text-align: center;
 }
 
-.type-effectiveness img {
-    height: 32px;
+@media (max-width: 768px) {
+    .row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
 }
