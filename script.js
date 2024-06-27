@@ -22,7 +22,7 @@ const TYPE_IDS = {
 
 async function fetchPokemonList() {
     try {
-        const response = await axios.get(`${POKEAPI_URL}/pokemon?limit=898`);
+        const response = await axios.get(`${POKEAPI_URL}/pokemon?limit=99999`);
         const pokemonList = response.data.results.map((pokemon, index) => ({
             name: pokemon.name,
             url: pokemon.url,
